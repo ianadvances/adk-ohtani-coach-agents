@@ -104,7 +104,24 @@ gcloud auth application-default login
 
 **注意**：如果您使用的是「Google AI Studio」，請跳過此步驟。
 
-### 2. 啟動 Dev UI
+### 2. 初始化向量資料庫
+
+⚠️ **重要步驟**：在首次使用系統前，您必須先執行以下腳本來初始化向量資料庫：
+
+```bash
+cd head_coach_agent/subagents/retrieval_coach_agent/prep_embedding
+python embed_to_chromadb.py
+```
+
+此腳本會：
+- 創建兩個 ChromaDB 向量資料庫（`vdb_schema` 和 `vdb_examples`）
+- 使用 Gemini 嵌入模型生成向量
+- 將資料庫 schema 文件嵌入到 `vdb_schema`
+- 將查詢範例文件嵌入到 `vdb_examples`
+
+**注意**：此步驟只需要執行一次。如果您看到「已添加文件到 vdb_schema」和「已添加文件到 vdb_examples」的訊息，表示初始化成功。
+
+### 3. 啟動 Dev UI
 
 使用終端機導航到 2-ohtani-rag 目錄：
 
@@ -118,7 +135,7 @@ cd 2-ohtani-rag
 adk web
 ```
 
-### 3. 開啟網頁介面
+### 4. 開啟網頁介面
 
 在瀏覽器中開啟提供的 URL（通常是 `http://localhost:8000`），在左上角的下拉選單中選擇 `head_coach_agent`。
 
