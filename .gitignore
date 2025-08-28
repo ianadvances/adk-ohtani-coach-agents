@@ -1,4 +1,11 @@
 .env
+
 .venv/
 
+.vscode/
+
+.DS_Store
+
 __pycache__/
+
+vdb_*

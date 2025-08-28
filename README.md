@@ -41,3 +41,10 @@ Senior Data Scientist
 身為 Cloud Latitude 的資深 Data Scientist，專注於運動科學與數據分析的交集。核心專業在於建構與部署複雜的預測模型，深度解析與量化運動員的表現。
 
 隨著生成式 AI 的浪潮，目前正引領團隊，將 LLM 及 AI Agent 相關技術整合至分析框架中，旨在開拓運動科技的次世代應用，從而擴展產品的技術維度與市場價值，突破運動數據的洞察邊界。
+
+---
+## 建立虛擬環境
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
