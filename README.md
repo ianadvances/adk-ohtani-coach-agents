@@ -1,50 +1,97 @@
-# 大谷翔平的 Multi-Agent 教練：由 ADK 打造 AI 教練團
 
-試想一下，如果你是世界級球星大谷翔平的總教練，要如何即時整合他漫天的比賽新聞、潛在的傷病風險、以及深度的投打統計數據，來制定最佳策略？在資訊爆炸的時代，這幾乎是不可能的任務。然而，透過 AI Agent 技術，我們能為他打造一支永不疲倦的專屬 AI 教練團。
 
-本工作坊將引領聽眾，使用 Google 最新的代理人開發工具包 (Agent Development Kit, ADK)，從零開始，親手為大谷翔平建構一個虛擬的 Multi-Agent 智慧教練團。
+# ADK 大谷翔平教練代理程式
 
-## 教練團組成
+本專案展示如何使用 ADK (Agent Development Kit) 建立不同類型的 AI 代理程式，從基礎對話功能到複雜的多代理系統。專案包含三個漸進式的學習範例，幫助您掌握 AI 代理程式開發技術。
 
-這個教練團將由不同專長的 AI Agent 組成：
+## 專案結構
 
-### 情蒐教練 (Scout Coach)
-我們將賦予這位教練上網的能力，24 小時監控網路，即時回報關於大谷的最新動態與輿論風向。
+```
+adk-ohtani-coach-agents/
+├── 1-quickstart/                # 基礎代理程式範例
+│   ├── simple_agent/            
+│   ├── function_tool_agent/     
+│   └── built_in_tool_agent/     
+├── 2-ohtani-rag/                # 多代理 RAG 系統
+│   └── head_coach_agent/        
+├── 3-ohtani-mcp/                # MCP 協議應用範例
+│   └── head_coach_agent/   
+└── requirements.txt             # 專案依賴套件
+```
 
-### 數據教練 (Data Coach)
-這是教練團的智慧核心。我們將為他實現強大的 NL2SQL 功能，讓他能聽懂總教練用「人話」下達的指令（例如：「他最近三場對上左投的長打率如何？」），並自主地從龐大的資料庫中查詢數據，挖掘出關鍵洞見。
+## 快速開始
 
-### 總教練 (Head Coach)
-這位代理人扮演決策核心的角色。他會接收來自「情蒐教練」的質化資訊和「數據教練」的量化分析，進行權衡與思辨，最終生成一份給人類參考的、條理分明的綜合評估報告。
+### 1. 建立虛擬環境
 
-## 團隊協作
-
-我們將探索如何運用 ADK 設計高效的教練團工作流程，讓每位 AI 教練各司其職、無縫協作，發揮出 1+1 > 2 的團隊智慧。
-
-這不僅是一場技術實戰，更是一次思維升級。參與者將學會如何將複雜問題拆解給不同 AI Agent，並組織它們完成超越單一模型能力的大型任務。
-
-## 課程目標
-
-課程結束後，聽眾將能：
-
-- **掌握前沿框架**：學習並掌握 Google 最新 Agent Development Kit (ADK) 的核心用法，從環境建置到部署，獲得第一手實戰經驗。
-- **學會建構 NL2SQL**：掌握實現強大 NL2SQL 功能的關鍵技術，讓 AI 應用能理解自然語言，並與傳統的 SQL 資料庫進行智慧互動，這是打通非結構化指令與結構化數據之間壁壘的黃金技能。
-- **多代理人設計模式**：理解如何設計、開發並串連多個各具專長的 AI 代理人，建立一個能解決複雜問題、穩定可靠的協作系統。
-- **獲得可複用的解決方案**：獲得一套完整的 「AI 智慧團隊」開發藍圖與程式碼範例，讓您能將此「教練團」模式輕鬆複製到金融、電商、製造等任何自身的工作領域。
-
-## 講者
-
-**Ian**  
-緯雲  
-Senior Data Scientist
-
-身為 Cloud Latitude 的資深 Data Scientist，專注於運動科學與數據分析的交集。核心專業在於建構與部署複雜的預測模型，深度解析與量化運動員的表現。
-
-隨著生成式 AI 的浪潮，目前正引領團隊，將 LLM 及 AI Agent 相關技術整合至分析框架中，旨在開拓運動科技的次世代應用，從而擴展產品的技術維度與市場價值，突破運動數據的洞察邊界。
-
----
-## 建立虛擬環境
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+### 2. 環境設定
+
+根據您的需求選擇以下其中一種配置方式：
+
+#### 選項 1: 使用 Vertex AI
+```env
+GOOGLE_GENAI_USE_VERTEXAI=TRUE
+GOOGLE_CLOUD_PROJECT=your-project-id
+GOOGLE_CLOUD_LOCATION=us-east5
+```
+
+#### 選項 2: 使用 Google AI API
+```env
+GOOGLE_GENAI_USE_VERTEXAI=FALSE
+GOOGLE_API_KEY=your-api-key
+```
+
+### 3. 身份驗證（僅限 Vertex AI）
+
+```bash
+gcloud auth application-default login
+```
+
+## 學習路徑
+
+### 階段 1: 基礎代理程式 (1-quickstart)
+
+📖 [詳細使用說明](./1-quickstart/README.md)
+
+從最簡單的對話代理程式開始，逐步學習工具使用和外部服務整合：
+
+- **Simple Agent**: 基礎對話功能
+- **Function Tool Agent**: 自定義工具使用
+- **Built-in Tool Agent**: 內建工具整合
+
+```bash
+cd 1-quickstart
+adk web
+```
+
+### 階段 2: 多代理程式 RAG 系統 (2-ohtani-rag)
+
+📖 [詳細使用說明](./2-ohtani-rag/README.md)
+
+學習複雜的多代理程式協作和 RAG 技術：
+
+- 階層式多代理程式架構
+- 資料庫查詢與網路情報整合
+- 智能錯誤處理和迭代改進
+
+```bash
+cd 2-ohtani-rag
+adk web
+```
+
+### 階段 3: MCP 協議應用 (3-ohtani-mcp)
+
+📖 [詳細使用說明](./3-ohtani-mcp/README.md)
+
+探索 Model Context Protocol 的進階應用。
+
+```bash
+cd 3-ohtani-mcp
+adk web
+```
