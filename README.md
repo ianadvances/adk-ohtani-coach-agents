@@ -1,14 +1,14 @@
 
 
-# ADK 大谷翔平教練代理程式
+# 大谷翔平的 Multi-Agent 教練：由 ADK 打造 AI 教練團
 
-本專案展示如何使用 ADK (Agent Development Kit) 建立不同類型的 AI 代理程式，從基礎對話功能到複雜的多代理系統。專案包含三個漸進式的學習範例，幫助您掌握 AI 代理程式開發技術。
+本專案展示如何使用 ADK (Agent Development Kit) 建立不同類型的 AI 代理，從基礎對話功能到複雜的多代理系統。專案包含三個漸進式的學習範例，幫助您掌握 AI 代理開發技術。
 
 ## 專案結構
 
 ```
 adk-ohtani-coach-agents/
-├── 1-quickstart/                # 基礎代理程式範例
+├── 1-quickstart/                # 基礎代理範例
 │   ├── simple_agent/            
 │   ├── function_tool_agent/     
 │   └── built_in_tool_agent/     
@@ -55,11 +55,11 @@ gcloud auth application-default login
 
 ## 學習路徑
 
-### 階段 1: 基礎代理程式 (1-quickstart)
+### 階段 1: 基礎代理 (1-quickstart)
 
 📖 [詳細使用說明](./1-quickstart/README.md)
 
-從最簡單的對話代理程式開始，逐步學習工具使用和外部服務整合：
+從最簡單的對話代理開始，逐步學習工具使用和外部服務整合：
 
 - **Simple Agent**: 基礎對話功能
 - **Function Tool Agent**: 自定義工具使用
@@ -70,13 +70,13 @@ cd 1-quickstart
 adk web
 ```
 
-### 階段 2: 多代理程式 RAG 系統 (2-ohtani-rag)
+### 階段 2: 多代理 RAG 系統 (2-ohtani-rag)
 
 📖 [詳細使用說明](./2-ohtani-rag/README.md)
 
-學習複雜的多代理程式協作和 RAG 技術：
+學習複雜的多代理協作和 RAG 技術：
 
-- 階層式多代理程式架構
+- 階層式多代理架構
 - 資料庫查詢與網路情報整合
 - 智能錯誤處理和迭代改進
 
