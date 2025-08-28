@@ -23,12 +23,12 @@ adk-ohtani-coach-agents/
 
 ### 1. 建立虛擬環境
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+| 步驟 | Linux / macOS  | Windows PowerShell  |
+|------|-------------------------|------------------------------|
+| 1. 建立環境 | `python3 -m venv .venv` | `python -m venv .venv` |
+| 2. 啟用環境 | `source .venv/bin/activate` | `.venv\Scripts\Activate.ps1` |
+| 3. 更新 pip | `pip install --upgrade pip` | `pip install --upgrade pip` |
+| 4. 安裝套件 | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
 
 ### 2. 環境設定
 
