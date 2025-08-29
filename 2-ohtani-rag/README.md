@@ -109,7 +109,7 @@ gcloud auth application-default login
 ⚠️ **重要步驟**：在首次使用系統前，您必須先執行以下腳本來初始化向量資料庫：
 
 ```bash
-cd head_coach_agent/subagents/retrieval_coach_agent/prep_embedding
+cd 2-ohtani-rag/head_coach_agent/subagents/retrieval_coach_agent/prep_embedding
 python embed_to_chromadb.py
 ```
 
