@@ -3,3 +3,4 @@ litellm==1.76.0
 pandas==2.3.2
 google-genai==1.31.0
 chromadb==1.0.20
+mcp==1.13.1

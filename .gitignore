@@ -6,6 +6,8 @@
 
 .DS_Store
 
+*.log
+
 __pycache__/
 
 vdb_*
