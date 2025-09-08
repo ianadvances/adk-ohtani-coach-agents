@@ -16,6 +16,11 @@ adk-ohtani-coach-agents/
 │   └── head_coach_agent/        
 ├── 3-ohtani-mcp/                # MCP 協議應用範例
 │   └── head_coach_agent/   
+├── 4-deploy/                    # 應用部署範例
+│   ├── duck_agent/              
+│   ├── app.py                   # Streamlit 應用程式
+│   ├── session_manager.py       # 會話管理
+│   └── Dockerfile       
 └── requirements.txt             # 專案依賴套件
 ```
 
@@ -94,4 +99,25 @@ adk web
 ```bash
 cd 3-ohtani-mcp
 adk web
+```
+
+### 階段 4: Web 應用部署 (4-deploy)
+
+📖 [詳細使用說明](./4-deploy/README.md)
+
+學習如何將 ADK 代理部署為可互動的網頁聊天機器人：
+
+- 基於 Streamlit 的 Web 應用程式
+- Docker 容器化部署
+- 會話管理支援
+
+#### 快速部署
+
+```bash
+cd 4-deploy
+# 配置環境變數
+cp .env.example .env
+# 啟動容器化應用
+docker-compose up -d
+# 開啟瀏覽器訪問 http://localhost:8501
 ```
