@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  duck-chat-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: duck-chat-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
