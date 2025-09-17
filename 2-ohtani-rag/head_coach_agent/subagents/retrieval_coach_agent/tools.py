@@ -26,22 +26,6 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
         )
         return response.embeddings[0].values
 
-def set_default_review_feedback(tool_context: ToolContext) -> None:
-    """
-    設置預設的審查回饋狀態。
-
-    此函數將 review_feedback 狀態初始化為空字串，
-    用於確保後續 sql_coach_agent 代理可正常執行代理。
-
-    Args:
-        tool_context: 工具調用的上下文環境，這裡用來設置狀態
-
-    Returns:
-        None
-    """
-    tool_context.state["review_feedback"] = ""
-
-
 def retrieve_schema_and_example(text: str) -> Dict[str, Any]:
     """
     根據使用者的問題，使用 RAG 方式提供相關的 schema 及範例。

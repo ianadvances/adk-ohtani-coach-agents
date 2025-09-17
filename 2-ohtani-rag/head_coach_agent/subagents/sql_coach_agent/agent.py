@@ -34,7 +34,7 @@ sql_coach_agent = LlmAgent(
     SELECT * FROM batting_game_logs WHERE recent_game_rank = 1;
 
     以下是你可能執行過的錯誤:
-    {review_feedback}
+    {review_feedback?}
     """,
     output_key="current_sql"
 )

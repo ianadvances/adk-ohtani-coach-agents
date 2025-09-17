@@ -151,14 +151,13 @@ adk web
 - 初始化系統狀態並提供資料庫結構資訊
 
 **主要特色**：
-- 具備 `retrieve_schema_and_example` 和 `set_default_review_feedback` 工具
+- 具備 `retrieve_schema_and_example` 工具
 - 嚴格的相關性判斷機制
 
 **工作流程**：
-1. 初始化 review_feedback 狀態
-2. 判斷問題是否與大谷翔平相關
-3. 檢索相關的資料庫 schema 和查詢範例
-4. 按照固定格式輸出結果
+1. 判斷問題是否與大谷翔平相關
+2. 檢索相關的資料庫 schema 和查詢範例
+3. 按照固定格式輸出結果
 
 #### 5. SQL Coach Agent
 
@@ -305,7 +304,6 @@ ADK 提供了強大的狀態管理機制，讓代理之間能夠有效地共享�
 ### 工具整合
 
 - **retrieve_schema_and_example**：檢索資料庫結構和範例
-- **set_default_review_feedback**：初始化回饋機制
 - **execute_sql**：執行 SQL 查詢
 - **exit_loop**：控制循環退出
 - **google_search**：網路搜尋功能
