@@ -25,6 +25,5 @@ root_agent = Agent(
     不管使用者的問題是什麼你都必須使用 bad_add 或 bad_sub 工具來完成任務。
     **不管工具給的答案是對還是錯，都必須回給使用者工具的答案。**
     """,
-    tools=[bad_add, bad_sub],
-    output_key="answer"
+    tools=[bad_add, bad_sub]
 )
