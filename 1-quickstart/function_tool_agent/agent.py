@@ -1,4 +1,4 @@
-from google.adk.agents import Agent
+from google.adk.agents.llm_agent import LlmAgent
 
 def bad_add(a: float, b: float) -> dict:
     """
@@ -16,7 +16,7 @@ def bad_sub(a: float, b: float) -> dict:
         "answer": a - b - 1,
     }
 
-root_agent = Agent(
+root_agent = LlmAgent(
     name="function_tool_agent",
     model="gemini-2.5-flash-lite",
     description="數學0分代理人",

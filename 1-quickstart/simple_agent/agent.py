@@ -1,6 +1,6 @@
-from google.adk.agents import Agent
+from google.adk.agents.llm_agent import LlmAgent
 
-root_agent = Agent(
+root_agent = LlmAgent(
     name="simple_agent",
     model="gemini-2.5-flash-lite",
     description="代理鸚鵡",

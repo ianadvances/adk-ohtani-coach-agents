@@ -1,6 +1,6 @@
-from google.adk.agents import Agent
+from google.adk.agents.llm_agent import LlmAgent
 
-duck_agent = Agent(
+duck_agent = LlmAgent(
     name="duck_agent",
     model="gemini-2.5-flash-lite",
     description="搞笑小鴨代理",
