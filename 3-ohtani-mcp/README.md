@@ -1,6 +1,6 @@
 # 3-ohtani-mcp 使用說明書
 
-本目錄包含一個基於 MCP（Model Context Protocol）的多代理系統，專門用於大谷翔平相關的數據查詢、分析和情報蒐集。系統採用階層式架構，透過 MCP 工具集實現更安全、規範的資料庫交互方式，包含一個主控制代理和三個專業子代理。
+本目錄包含一個基於 MCP（Model Context Protocol）的多代理系統，專門用於大谷翔平相關的數據查詢、分析和情報蒐集。系統採用階層式架構，透過 MCP 工具集實現資料庫交互，包含一個主控制代理和三個專業子代理。
 
 ## 系統架構圖
 
@@ -268,7 +268,8 @@ A:
 完成 3-ohtani-mcp 的學習後，您可以：
 
 1. 比較 2-ohtani-rag 和 3-ohtani-mcp 的架構差異
-2. 學習如何實現自己的 MCP 服務器
-3. 探索 Model Context Protocol 的更多應用場景
-4. 開發基於 MCP 的多代理系統
-5. 研究如何將 MCP 整合到現有的 AI 應用中
+2. 嘗試將 2-ohtani-rag 的 RAG 功能整合到 3-ohtani-mcp 的工具列中
+3. 學習如何實現自己的 MCP 服務器
+4. 探索 Model Context Protocol 的更多應用場景
+5. 開發基於 MCP 的多代理系統
+6. 研究如何將 MCP 整合到現有的 AI 應用中

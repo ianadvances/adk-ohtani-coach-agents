@@ -49,7 +49,7 @@ cd 4-deploy
 啟動容器化應用程式：
 
 ```bash
-docker-compose up -d
+docker-compose up --build
 ```
 
 #### 方式二：開發模式執行

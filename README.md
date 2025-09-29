@@ -2,7 +2,7 @@
 
 # 大谷翔平的 Multi-Agent 教練：由 ADK 打造 AI 教練團
 
-本專案展示如何使用 ADK (Agent Development Kit) 建立不同類型的 AI 代理，從基礎對話功能到複雜的多代理系統。專案包含三個漸進式的學習範例，幫助您掌握 AI 代理開發技術。
+本專案展示如何使用 ADK (Agent Development Kit) 建立不同類型的 AI 代理，從基礎對話功能到複雜的多代理系統。專案包含四個漸進式的學習範例，幫助您掌握 AI 代理開發技術。
 
 ## 專案結構
 
@@ -24,9 +24,7 @@ adk-ohtani-coach-agents/
 └── requirements.txt             # 專案依賴套件
 ```
 
-## 快速開始
-
-### 1. 建立虛擬環境
+## 建立虛擬環境
 
 | 步驟 | Linux / macOS  | Windows PowerShell  |
 |------|-------------------------|------------------------------|
@@ -34,29 +32,6 @@ adk-ohtani-coach-agents/
 | 2. 啟用環境 | `source .venv/bin/activate` | `.venv\Scripts\Activate.ps1` |
 | 3. 更新 pip | `pip install --upgrade pip` | `python.exe -m pip install --upgrade pip` |
 | 4. 安裝套件 | `pip install -r requirements.txt` | `pip install -r requirements.txt` |
-
-### 2. 環境設定
-
-根據您的需求選擇以下其中一種配置方式：
-
-#### 選項 1: 使用 Vertex AI
-```env
-GOOGLE_GENAI_USE_VERTEXAI=TRUE
-GOOGLE_CLOUD_PROJECT=your-project-id
-GOOGLE_CLOUD_LOCATION=us-east5
-```
-
-#### 選項 2: 使用 Google AI API
-```env
-GOOGLE_GENAI_USE_VERTEXAI=FALSE
-GOOGLE_API_KEY=your-api-key
-```
-
-### 3. 身份驗證（僅限 Vertex AI）
-
-```bash
-gcloud auth application-default login
-```
 
 ## 學習路徑
 
@@ -118,6 +93,6 @@ cd 4-deploy
 # 配置環境變數
 cp .env.example .env
 # 啟動容器化應用
-docker-compose up -d
+docker-compose up --build
 # 開啟瀏覽器訪問 http://localhost:8501
 ```
