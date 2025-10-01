@@ -27,7 +27,7 @@ analytics_coach_agent = LlmAgent(
     
     核心功能（當問題相關時）：
     1. 整合來自 scout_coach_agent 的 {scout_summary}
-    2. 整合來自 fetching_coach_agent 的 {query_data}
+    2. 整合來自 fetching_coach_agent 的 {query_data?}
     3. 結合使用者的原始問題，進行綜合分析
     
     分析原則：
