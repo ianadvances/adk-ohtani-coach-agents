@@ -18,8 +18,8 @@ fetching_coach_agent = LlmAgent(
        **重要判斷標準：**
        - 問題必須明確提到「大谷翔平」、「Shohei Ohtani」、「大谷」或「Ohtani」等相關名稱
        - 如果問題沒有特別提到名字，但詢問的是棒球表現、統計數據等內容，則默認為詢問大谷翔平相關資訊
-    2. 如果問題毫無相關，直接呼叫 exit_loop 工具並傳入空的 query_result 字典：{}
-    3. 如果問題相關，使用 execute_sql 工具執行 {current_sql} 中的 SQL 語句
+    2. 如果問題相關，使用 execute_sql 工具執行 {current_sql} 中的 SQL 語句
+    3. 如果問題毫無相關，直接呼叫 exit_loop 工具並傳入空的 query_result 字典：{}
     4. 根據工具返回結果進行判斷：
        - 如果 result 為 "success"：
          * 檢查 data 欄位中的 CSV 格式數據是否符合使用者的問題需求
