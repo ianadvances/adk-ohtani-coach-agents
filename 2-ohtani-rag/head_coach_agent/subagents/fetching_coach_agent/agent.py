@@ -20,7 +20,7 @@ fetching_coach_agent = LlmAgent(
        - 如果問題沒有特別提到名字，但詢問的是棒球表現、統計數據等內容，則默認為詢問大谷翔平相關資訊
     2. 如果問題相關，使用 execute_sql 工具執行 {current_sql} 中的 SQL 語句
     3. 如果問題毫無相關，直接呼叫 exit_loop 工具並傳入空的 query_result 字典：{}
-    4. 根據工具返回結果進行判斷：
+    4. 根據 execute_sql 工具返回結果進行判斷：
        - 如果 result 為 "success"：
          * 檢查 data 欄位中的 CSV 格式數據是否符合使用者的問題需求
          * 如果符合需求：呼叫 exit_loop 工具並將完整的 execute_sql 結果作為參數傳入
