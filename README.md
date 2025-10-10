@@ -14,13 +14,13 @@ adk-ohtani-coach-agents/
 │   └── built_in_tool_agent/     
 ├── 2-ohtani-rag/                # 多代理 RAG 系統
 │   └── head_coach_agent/        
-├── 3-ohtani-mcp/                # MCP 協議應用範例
-│   └── head_coach_agent/   
-├── 4-deploy/                    # 應用部署範例
+├── 3-deploy/                    # 應用部署範例
 │   ├── duck_agent/              
 │   ├── app.py                   # Streamlit 應用程式
 │   ├── session_manager.py       # 會話管理
 │   └── Dockerfile       
+├── 4-ohtani-mcp/                # MCP 協議應用範例
+│   └── head_coach_agent/   
 └── requirements.txt             # 專案依賴套件
 ```
 
@@ -65,20 +65,9 @@ cd 2-ohtani-rag
 adk web
 ```
 
-### 階段 3: MCP 協議應用 (3-ohtani-mcp)
+### 階段 3: Web 應用部署 (3-deploy)
 
-📖 [詳細使用說明](./3-ohtani-mcp/README.md)
-
-探索 Model Context Protocol 的進階應用。
-
-```bash
-cd 3-ohtani-mcp
-adk web
-```
-
-### 階段 4: Web 應用部署 (4-deploy)
-
-📖 [詳細使用說明](./4-deploy/README.md)
+📖 [詳細使用說明](./3-deploy/README.md)
 
 學習如何將 ADK 代理部署為可互動的網頁聊天機器人：
 
@@ -89,10 +78,21 @@ adk web
 #### 快速部署
 
 ```bash
-cd 4-deploy
+cd 3-deploy
 # 配置環境變數
 cp .env.example .env
 # 啟動容器化應用
 docker-compose up --build
 # 開啟瀏覽器訪問 http://localhost:8501
+```
+
+### 階段 4: MCP 協議應用 (4-ohtani-mcp)
+
+📖 [詳細使用說明](./4-ohtani-mcp/README.md)
+
+探索 Model Context Protocol 的進階應用。
+
+```bash
+cd 4-ohtani-mcp
+adk web
 ```

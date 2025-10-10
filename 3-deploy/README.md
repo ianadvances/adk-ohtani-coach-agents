@@ -1,12 +1,12 @@
 
-# 4-deploy 使用說明書
+# 3-deploy 使用說明書
 
 本目錄包含一個基於 Streamlit 的 Web 應用程式部署範例，展示如何將 ADK (Agent Development Kit) 代理部署為可互動的網頁聊天機器人。系統採用容器化部署方式，包含會話管理功能和 Agent，提供完整的聊天機器人體驗。
 
 ## 目錄結構
 
 ```
-4-deploy/
+3-deploy/
 ├── .dockerignore          # Docker 忽略檔案
 ├── .env.example           # 環境變數配置範例
 ├── Dockerfile             # Docker 映像定義
@@ -40,10 +40,10 @@ cp .env.example .env
 
 #### 方式一：Docker Compose 部署（推薦）
 
-使用終端機導航到 4-deploy 目錄：
+使用終端機導航到 3-deploy 目錄：
 
 ```bash
-cd 4-deploy
+cd 3-deploy
 ```
 
 啟動容器化應用程式：
@@ -232,9 +232,9 @@ A:
 
 ## 下一步
 
-完成 4-deploy 的學習後，您可以：
+完成 3-deploy 的學習後，您可以：
 
-1. 回顧前面三個目錄的學習內容，理解從基礎到部署的完整流程
+1. 探索 `4-ohtani-mcp` 目錄了解 MCP（Model Context Protocol）應用
 2. 嘗試自訂小鴨代理的個性和回應風格
 3. 探索如何將其他目錄的複雜代理系統部署為 Web 應用
 4. 研究如何整合多個代理到同一個 Web 介面中

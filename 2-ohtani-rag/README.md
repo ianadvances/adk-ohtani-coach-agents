@@ -338,7 +338,7 @@ A:
 
 完成 2-ohtani-rag 的學習後，您可以：
 
-1. 探索 `3-ohtani-mcp` 目錄了解 MCP（Model Context Protocol）應用
+1. 探索 `3-deploy` 目錄了解如何將 ADK 代理部署為 Web 應用
 2. 學習如何建立自己的多代理 RAG 系統
 3. 研究如何整合不同類型的資料來源
 4. 開發針對特定領域的專業分析系統
